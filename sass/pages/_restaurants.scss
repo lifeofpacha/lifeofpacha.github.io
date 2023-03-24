@@ -1,0 +1,177 @@
+.imageRestaurant{
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.main--restaurant{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    @include for-size(tablet_portrait){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* - - - Menu - - - */
+.menu{
+    padding: 34px 4% 0 4%;
+    margin-top: -2em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border-radius: 2em 2em 0 0;
+    background: #f7f7f7;
+
+    @include for-size(tablet_landscape){
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__title{
+        font-family: "Shrikhand";
+        font-size: 28px;
+        padding-left: 5%;
+        padding-bottom: 35px;
+        
+        @include for-size(tablet_landscape){
+            width: 100%;
+        }
+    }
+
+    & .fa-heart{
+        top: 40px;
+        font-size: 28px;
+    }
+
+    &__list{
+        font-family: "Roboto", sans-serif;
+        margin-bottom: 45px;
+
+        @include for-size(tablet_landscape){
+            margin-left: 5%;
+        }
+
+        &--noMarginLeft{
+            margin-left: 0;
+        }
+
+        &__title{
+            text-transform: uppercase;
+            margin-left: 6px;
+            padding-bottom: 9px;
+            font-size: 18px;
+            font-weight: 400;
+            position: relative;
+
+            &::after{
+                content: "";
+                position: absolute;
+                height: 3px;
+                width: 40px;
+                bottom: 0;
+                left: 0;
+                background: $colorTertiary;
+            }
+        }
+
+        
+
+        &__card{
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0.25rem 0.25rem 10px #e4e4e4;
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+            white-space: nowrap;
+            margin-top: 14px;
+
+            animation: slideup 1s ease both;
+            @for $i from 1 through 10{ // Space circles as a big common circle and delay animation to make a "spin"
+                &.delay-#{$i}{
+                        animation-delay: calc(0.1s * #{$i});
+                }
+
+            }
+
+            @include for-size(tablet_portrait){
+                width: 450px;
+            }
+
+            @include for-size(tablet_landscape){
+                width: 315px;
+            }
+
+            @include for-size(desktop){
+                width: 450px;
+            }
+
+            &__text{
+                flex: 1;
+                padding: 15px 0 15px 10px;
+                min-width: 0;
+                
+                &__title{
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    margin-bottom: 7px;
+                }
+                &__description{
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    
+                }
+            }
+            
+            &__price{
+                align-self: flex-end;
+                margin-left: 5px;
+                margin-right: 20px;
+                padding-bottom: 15px;
+                font-weight: bold;
+            }
+
+            &__check{
+                background: #9ae3d1;
+                margin-right: -60px;
+                width: 59px;
+                border-radius: 0 20px 20px 0;
+                font-size: 20px;
+                color: white;
+                @include centerElement;
+                transition: all .5s ease;
+                
+                & i{
+                    transform: rotate(180deg);
+                    transition: all .7s ease;
+                }
+            }
+
+            &:hover &__check{
+                margin: 0;
+            }
+            &:hover &__check i{
+                transform: rotate(0);
+            }
+        }
+    }
+
+    &__button{
+        align-self: center;
+        width: auto;
+        padding: 1em 49px;
+        margin-top: 5px;
+        margin-bottom: 60px;
+
+        @include for-size(tablet_landscape){
+            margin: 5px 25% 60px 25%;
+        }
+    }
+}

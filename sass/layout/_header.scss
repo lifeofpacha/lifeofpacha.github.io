@@ -1,0 +1,18 @@
+/* - - - Header - - - */
+.header {
+    @include centerElement;
+    padding: 15px 0;
+    box-shadow: 0px 5px 10px 0px #cfcfcf;
+    position: relative;
+    z-index: 1;
+
+    &--no-shadow{
+        box-shadow: none;
+    }
+
+    &__return{
+        position: absolute;
+        left: 6%;
+        font-size: 18px;
+    }
+}

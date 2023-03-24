@@ -1,0 +1,17 @@
+.button {
+    font-size: 1.1em;
+    background-image: linear-gradient(355deg, $colorPrimary, $colorSecondary);
+    padding: 1em 1.5em;
+    border-radius: 30px;
+    color: white;
+    box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+    cursor: pointer;
+    transition: all .25s ease;
+    font-family: "Roboto", sans-serif;
+
+    &:hover {
+        box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 50%);
+        filter: brightness(1.1);
+    }
+}
+
