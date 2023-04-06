@@ -209,10 +209,12 @@ a {
           animation: popin 0.5s ease both;
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
+	  
 }
 .fa-heart.far:hover ~ .fa-heart.fas, .fa-heart.fas:hover {
   -webkit-animation-play-state: running;
           animation-play-state: running;
+	animation-direction:reverse;
 }
 
 .loader {

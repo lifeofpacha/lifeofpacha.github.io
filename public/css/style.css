@@ -48,7 +48,7 @@ a {
   0% {
     transform: scale(0);
   }
-  100% {
+ 100% {
     transform: scale(1.05);
   }
 }
@@ -115,7 +115,7 @@ a {
 }
 
 /* - - - Components - - - */
-.fa-heart {
+.fa-heart{
   position: absolute;
   right: 8%;
   top: 24px;
@@ -127,7 +127,6 @@ a {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   z-index: 1;
-  animation: popin 0.5s ease both;
   animation-play-state: paused;
 }
 .fa-heart.far:hover ~ .fa-heart.fas, .fa-heart.fas:hover {
@@ -365,7 +364,7 @@ a {
 }
 .explaination__card__text {
   color: black;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
 }
 .explaination__card__step {
@@ -495,6 +494,9 @@ a {
     flex-wrap: wrap;
     justify-content: center;
   }
+}
+.description__title{
+font-family: "Shrikhand";
 }
 .menu__title {
   font-family: "Shrikhand";

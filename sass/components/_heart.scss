@@ -5,13 +5,13 @@
     font-size: 32px;
     cursor: pointer;
 
-    &.fas{
+    &.fas:hover{
         background: linear-gradient(190deg, $colorPrimary, $colorSecondary);
         background-clip: text;
         -webkit-text-fill-color: transparent;
         z-index: 1;
-        animation: popin .5s ease both;
-        animation-play-state: paused;
+        animation: popin .5s ease both ;
+	animation-delay:6s ease;
     }
 
     &.far:hover ~ &.fas,
