@@ -7,4 +7,4 @@ Compétences évaluées
 - Utiliser un système de gestion de versions pour le suivi du projet et son hébergement
 - Mettre en place son environnement Front-End
 
-Lien github : https://lifefpacha.github.io
+Lien github : https://lifeofpacha.github.io
