@@ -191,6 +191,20 @@ a {
 }
 
 /* - - - Components - - - */
+@keyframes pulse{
+    0% {
+        transform: scale(1);
+        opacity: 0;
+    }
+    50% {
+        transform:  scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform:  scale(1);
+        opacity: 1;
+    }
+}
 .fa-heart {
   position: absolute;
   right: 8%;
@@ -198,23 +212,23 @@ a {
   font-size: 32px;
   cursor: pointer;
 }
-.fa-heart.fas {
-  background: -o-linear-gradient(260deg, #9356DC, #FF79DA);
-  background: linear-gradient(190deg, #9356DC, #FF79DA);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-  z-index: 1;
-  -webkit-animation: popin 0.5s ease both;
-          animation: popin 0.5s ease both;
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-	  
+
+.fa-heart.fas{
+ color:transparent;
+    background: linear-gradient(190deg, #9356DC, #FF79DA);
+  backgroud-clip:text;
+  -webkit-background-clip:text;
+  opacity:0;
+transition:all 2ms ease-in-out;
+  
 }
-.fa-heart.far:hover ~ .fa-heart.fas, .fa-heart.fas:hover {
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
-	animation-direction:reverse;
+.fa-heart.fas:hover{
+ color:transparent;
+    background: linear-gradient(190deg, #9356DC, #FF79DA);
+  backgroud-clip:text;
+  -webkit-background-clip:text;
+  opacity:1;
+  animation: pulse linear 0.5s;
 }
 
 .loader {

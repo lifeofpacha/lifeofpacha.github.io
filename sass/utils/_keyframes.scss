@@ -8,7 +8,20 @@
     filter: opacity(0); // Show the circle behind
   }
 }
-
+@keyframes pulse{
+    0% {
+        transform: scale(1);
+        opacity: 0;
+    }
+    50% {
+        transform:  scale(1.3);
+        opacity: 1;
+    }
+    100% {
+        transform:  scale(1);
+        opacity: 1;
+    }
+}
 @keyframes fadeoutLoader {
   50% {
     opacity: 1;
@@ -22,15 +35,7 @@
   }
 }
 
-@keyframes popin{
-  0% {
-    transform: scale(0);
-  }
 
-  100% {
-
-    transform: scale(1.05);
-  }
 @keyframes popin_out{
 	 0% {
     transform: scale(1.05);
